@@ -79,44 +79,6 @@ const processImages = async(requestId , products , filePath) => {
     }
 }
 
-// const processImages = async (requestId , products , filePath) => {
-//     for(const row of products){
-//         const inputUrls = row['Input Image Urls'].split(',');
-//         const outputUrls = [];
-
-//         for(const url of inputUrls){
-//             const outputFileName = `${uuid()}.jpg`
-//             const outputPath = `./uploads/images/${outputFileName}`;
-//             try{
-//                 await downlaodImage(url.trim()  , outputPath)
-//                 const buffer = fs.readFileSync(outputPath);
-//                 const compressedBuffer = await sharp(buffer).jpeg({quality:50}).toBuffer();
-//                 fs.writeFileSync(outputPath , compressedBuffer)
-//                 outputUrls.push(outputPath)
-//             }catch(err){
-//                 console.log(err)
-//             }
-//         }
-//                   // update the output urls 
-//                   await Product.updateMany({requestID:requestId},{$set:{outputImageUrls:outputUrls}});
-//                   // update request status to completed
-//                   await Request.updateOne({requestId:requestId} , {$set:{status:'completed'}})
-//                   try{
-//                       const webhookUrl = 'http://localhost:4000/api/webhook'
-//                       const resp = await fetch(webhookUrl , {
-//                           method:"POST",
-//                           headers: {
-//                               'Content-Type': 'application/json',
-//                           },
-//                           body: JSON.stringify({ requestId }),
-//                       });
-//                       const data = await resp.json()
-//                       console.log('Webhook triggered successfully');
-//                   }catch(err){
-//                       console.error('Error triggering webhook:', err.message);
-//                   }
-//     }
-// }
 
 
 
