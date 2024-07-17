@@ -14,6 +14,8 @@ const port = process.env.PORT || 3000
 app.use('/api/upload' , uploadRoutes)
 app.use('/api/status' , statusRoutes)
 app.use('/api/webhook', webhookHandler);
+app.use('/ProcessedCSV', express.static('ProcessedCSV'));
+app.use('/uploads', express.static('uploads'));
 
 app.listen(port , () => {
     console.log(`Listening at port ${port}`)

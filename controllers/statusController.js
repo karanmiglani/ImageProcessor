@@ -8,7 +8,8 @@ const checkStatus = async (req , resp) => {
     if(!request){
         return resp.status(404).json({status : 'Request not found'})
     }
-    return resp.status(200).json({status:request.status , completedAt:request.updatedAt})
+    const downloadLink = `http://localhost:4000/ProcessedCSV/output_${requestId}.csv`
+    return resp.status(200).json({status:request.status , completedAt:request.updatedAt , fileUrl:downloadLink})
 }
 
 

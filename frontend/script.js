@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             resp = await resp.json();
             console.log(resp);
             if(resp.status === 'completed'){
-                document.getElementById('msg').innerHTML = 'Your request is completed'
+                console.log(resp);
+                document.getElementById('msg').innerHTML = `Your request is completed . <a href=${resp.fileUrl}>Click Here</a> to download your file`
                 document.getElementById('msg').classList.remove('text-danger')
                 document.getElementById('msg').classList.add('text-success')
             }else{
