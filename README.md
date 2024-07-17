@@ -21,22 +21,23 @@ This project is a Node.js application for processing images from CSV files. It p
 <br>
 
 <b>API Endpoints</b>
-File Upload
-URL: /api/upload
-Method: POST
-Description: Upload a CSV file containing image URLs.
-Response:
-200 OK with { requestId } on successful upload.
-400 Bad Request if the file is not a CSV.
-Status Checking
-URL: /api/status
-Method: GET
-Description: Check the processing status of the uploaded CSV file.
-Query Parameters: requestId
-Response:
-200 OK with { status, completedAt, fileUrl } if the request is found.
-404 Not Found if the request ID is not found.
-Webhook Handler
-URL: /api/webhook
-Method: POST
-Description: Handle webhook notifications once processing is completed.
+<br>
+<b>File Upload</b>
+<li>URL: /api/upload</li>
+<li>Method: POST</li>
+<li>Description: Upload a CSV file containing image URLs.</li>
+<li>Response:</li>
+<li>200 OK with { requestId } on successful upload.</li>
+<li>400 Bad Request if the file is not a CSV.</li>
+<b>Status Checking</b>
+<li>URL: /api/status</li>
+<li>Method: GET</li>
+<li>Description: Check the processing status of the uploaded CSV file.</li>
+<li>Query Parameters: requestId</li>
+<li>Response:</li>
+<li>200 OK with { status, completedAt, fileUrl } if the request is found.</li>
+<li>404 Not Found if the request ID is not found.</li>
+<b>Webhook Handler</b>
+<li>URL: /api/webhook</li>
+<li>Method: POST</li>
+<li>Description: Handle webhook notifications once processing is completed.</li>
