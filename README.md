@@ -1,11 +1,14 @@
 <h1>Image Processing Service</h1>
 This project is a Node.js application for processing images from CSV files. It provides APIs for file upload, status checking, and webhook integration.
+hr
 
-Features
-File Upload: Upload CSV files containing image URLs.
-Image Processing: Download, compress, and save images locally.
-Status Checking: Check the processing status of uploaded CSV files.
-Webhook Integration: Notify external systems once processing is completed.
+<b>Features</b>
+<ul>
+<li><b>File Upload:</b> Upload CSV files containing image URLs.</li>
+<li><b>Image Processing:</b> Download, compress, and save images locally.</li>
+<li><b>Status Checking:</b> Check the processing status of uploaded CSV files.</li>
+<li><b>Webhook Integration:</b> Notify external systems once processing is completed.</li>
+</ul>
 Technologies Used
 Node.js
 Express.js
