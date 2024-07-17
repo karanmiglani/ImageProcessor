@@ -1,6 +1,6 @@
 <h1>Image Processing Service</h1>
 This project is a Node.js application for processing images from CSV files. It provides APIs for file upload, status checking, and webhook integration.
-hr
+<hr>
 
 <b>Features</b>
 <ul>
@@ -9,35 +9,18 @@ hr
 <li><b>Status Checking:</b> Check the processing status of uploaded CSV files.</li>
 <li><b>Webhook Integration:</b> Notify external systems once processing is completed.</li>
 </ul>
-Technologies Used
-Node.js
-Express.js
-Multer: For handling file uploads.
-Sharp: For image processing.
-Mongoose: For MongoDB object modeling.
-csv-writer: For writing CSV files.
-uuid: For generating unique IDs.
-dotenv: For environment variable management.
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/image-processing-service.git
-cd image-processing-service
-Install dependencies:
-bash
-Copy code
-npm install
-Set up your environment variables in a .env file:
-makefile
-Copy code
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-Start the server:
-bash
-Copy code
-npm start
-API Endpoints
+<b>Technologies Used</b> <br>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>Multer: For handling file uploads.</li>
+<li>Sharp: For image processing.</li>
+<li>Mongoose: For MongoDB object modeling.</li>
+<li>csv-writer: For writing CSV files.</li>
+<li>uuid: For generating unique IDs.</li>
+<li>dotenv: For environment variable management.</li>
+<br>
+
+<b>API Endpoints</b>
 File Upload
 URL: /api/upload
 Method: POST
